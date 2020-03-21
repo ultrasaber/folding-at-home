@@ -18,11 +18,11 @@ RUN apt-get update && apt-get install --no-install-recommends -y \
         apt-get autoremove -y &&\
         rm --recursive --verbose --force /tmp/* /var/log/* /var/lib/apt/
 
-# Web viewer
+# Web viewer and remote control ports
 EXPOSE 7396
+EXPOSE 36330
 
 USER folder
-
 WORKDIR /home/folder
 
 ENTRYPOINT ["FAHClient", "--web-allow=0/0:7396", "--allow=0/0:7396"]
