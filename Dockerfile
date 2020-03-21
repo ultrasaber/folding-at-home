@@ -1,5 +1,5 @@
 FROM debian:stable-slim
-LABEL maintainer="john.k.tims@gmail.com"
+LABEL maintainer="saberthesaber@gmail.com"
 
 ENV FAH_VERSION_MINOR=7.5.1
 ENV FAH_VERSION_MAJOR=7.5
@@ -26,4 +26,4 @@ USER folder
 WORKDIR /home/folder
 
 ENTRYPOINT ["FAHClient", "--web-allow=0/0:7396", "--allow=0/0:7396"]
-CMD ["--user=Anonymous", "--team=0", "--gpu=false", "--smp=true", "--power=full"]
+CMD ["--user=Anonymous", "--team=0", "--gpu=false", "--smp=true", "--power=medium"]
